@@ -44,12 +44,10 @@ export default defineComponent({
       this.password = "";
     },
     async loginHandle() {
-      console.log(`logging in as ${this.email} with password: ${this.password}`);
       const user = await this.$store.dispatch({
         type: "loginUser",
         userCred: { email: this.email, password: this.password },
       });
-      console.log("login user: ", user);
       if (user) this.$router.push(`/welcome`);
       this.resetData();
     },

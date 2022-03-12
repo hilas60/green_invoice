@@ -1,10 +1,26 @@
 <template>
   <div class="user-info">
     user:
-    <pre
-      >{{ user }}
-      </pre
-    >
+    <div>
+      <p>Name: {{ user.firstName + " " + user.lastName }}</p>
+      <p>Email: {{ user.email }}</p>
+      <p>Phone No.: {{ user.phone }}</p>
+      <p>
+        Subscription Start Date: {{ new Date(user.signUpDate * 1000).toString().substring(4, 15) }}
+      </p>
+      <p>
+        Subscription Expiration Date:
+        {{ new Date(user.subscriptionExpirationDate * 1000).toString().substring(4, 15) }}
+      </p>
+      <div>
+        Businesses:
+        <li v-for="business in user.businesses" :key="business.id">{{ business.name }}</li>
+      </div>
+    </div>
+
+    <pre>
+ {{ user }}
+    </pre>
   </div>
 </template>
 
@@ -15,9 +31,7 @@ export default defineComponent({
   name: "UserInfoView",
   computed: {
     user() {
-      const user = this.$store.state.user;
-      console.log({ user });
-      return user;
+      return this.$store.state.user;
     },
   },
 });
