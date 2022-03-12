@@ -25,8 +25,6 @@ export async function logout() {
     user = null;
     console.error("ERROR USERSERVICE => couldnt find user");
   }
-  console.log({ user });
-
   return user;
 }
 
@@ -39,7 +37,5 @@ export async function getUserById() {
     user = null;
     console.error("ERROR USERSERVICE => couldnt find user");
   }
-  console.log(user);
-
   return user;
 }

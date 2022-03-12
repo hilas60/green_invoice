@@ -27,8 +27,6 @@ export default createStore({
       }
     },
     async logoutUser(context) {
-      console.log("logging out user");
-
       const user = await logout();
       context.commit({ type: "setUser", user: null });
     },
