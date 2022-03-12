@@ -1,21 +1,38 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view />
 </template>
 
 <style lang="scss">
+@import "@/assets/fonts.scss";
+* {
+  box-sizing: border-box !important;
+}
+body {
+  margin: unset;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "almoni-neue-dl", sans-serif;
 }
 
-nav {
+input,
+button {
+  all: unset;
+
+  :active,
+  :focus {
+    all: unset;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+button {
+  cursor: pointer;
+}
+/* nav {
   padding: 30px;
 
   a {
@@ -26,5 +43,5 @@ nav {
       color: #42b983;
     }
   }
-}
+} */
 </style>
