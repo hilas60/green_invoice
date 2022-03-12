@@ -12,6 +12,7 @@ body {
 }
 #app {
   font-family: "almoni-neue-dl", sans-serif;
+  color: #23445a;
 }
 
 input,
@@ -31,17 +32,11 @@ input:-webkit-autofill:active {
 }
 button {
   cursor: pointer;
+  border-radius: 100px;
+  min-height: 56px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
 }
-/* nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-} */
 </style>

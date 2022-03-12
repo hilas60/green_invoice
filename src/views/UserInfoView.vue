@@ -43,6 +43,5 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   width: 100%;
-  color: purple;
 }
 </style>

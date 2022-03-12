@@ -87,15 +87,9 @@
         display: flex;
         width: 100%;
         button {
-          border-radius: 100px;
-          min-height: 56px;
-          text-align: center;
-          font-size: 16px;
-          font-weight: 600;
-          letter-spacing: 0;
-        }
-        button:first-child {
-          margin-right: 20px;
+          &:first-child {
+            margin-right: 20px;
+          }
         }
         .sso-button {
           flex: 2 1 170px;
