@@ -4,7 +4,7 @@ interface Credentials {
   email: string;
   password: string;
 }
-const BASE_API_URL = "https://jupiter.d.greeninvoice.co.il/api/v1";
+const BASE_API_URL = "http://localhost:3000/api/v1";
 
 export async function login(userCred: Credentials) {
   let user;
